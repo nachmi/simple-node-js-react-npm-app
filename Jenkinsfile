@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'chmod -R 777 *'
+                sh 'mkdir /.nmp'
+                sh 'chmod -R 777 /.npm'
                 sh 'npm install'
             }
         }
